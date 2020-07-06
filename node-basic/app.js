@@ -1,12 +1,9 @@
-const { sum } = require('./helpers');
-const http = require('http');
+const express = require('express');
+const { response } = require('express');
+const app = express();
 
-const server = http.createServer((req, res) => {
-    res.end('hello from node http server updatesss');
+app.get('/', (req, res) => {
+    res.send('hello from express')
 });
 
-server.listen(3000);
-
-
-const total = sum(2,333);
-console.log("Total: ", total);
+app.listen(3000);
