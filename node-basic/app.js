@@ -1,5 +1,4 @@
-// console.log("process ----> ", process)
-const helpers = require('./helpers');
+const { sum } = require('./helpers');
 
-const total = helpers.sum(2,333);
+const total = sum(2,333);
 console.log("Total: ", total);
