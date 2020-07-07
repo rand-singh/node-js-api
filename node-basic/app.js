@@ -11,4 +11,13 @@
 const fs = require('fs'),
     fileName = 'target.txt';
 
-fs.watch(fileName, () => console.log('File changed!'));
+fs.readFile(fileName, (err, data) => {
+    if(err) {
+        console.log('error---------->',err)
+    }
+
+    console.log(data.toString())
+})
+
+
+console.log('node asyn programming');
